@@ -1,0 +1,44 @@
+.ag1{
+	display: block;
+  	justify-content: center;
+  	align-items: center;
+  	text-align: center;
+  	height: 250px;
+  	padding-top: 50px;
+  	border: 0px solid black;
+}
+.img1{
+	display: inline-block;
+  	justify-content: center;
+  	align-items: center;
+  	text-align: center;
+	border: 0px solid black;
+}
+
+.cont{
+	display: inline-block;
+  	justify-content: center;
+  	align-items: center;
+  	text-align: center;
+  	border: 0px solid red;
+  	width: 100%;
+  	margin-bottom: 80px;
+}
+#garantia1,#garantia2,#garantia3{
+	
+}
+#garantia1{
+	
+}
+#garantia2{
+	
+}
+#garantia3{
+	
+}
+#titutlo1{
+	
+}
+#texto1{
+	font-size: 30px;
+}

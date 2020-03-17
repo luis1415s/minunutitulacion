@@ -1,0 +1,126 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.full-width-home{
+	border: 2px solid green;
+	padding: 0;
+	margin: 0;
+}
+.uk-grid{
+	border: 2px solid red;
+	width: 80%;
+
+}
+.nop{
+	width: 50%;
+	border: 2px solid black;
+}
+.nop, .garantiaimg{
+	display: inline-block;
+}
+.garantiaimg{
+	width: 50%;
+	height: 50%;
+}
+/*CAROUSEL CSS*/
+.cont{
+	border: 0px solid blue;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	/*padding-top: 100px;*/
+}
+.container{
+	border: 0px solid green;
+	/*position: absolute;*/
+	width: 100%;
+	padding: 0px;
+}
+#myCarousel{/*This div cointains the images and buttons Next & Previous*/
+	border: 0px solid orange;
+	/*background-color: #C4C0C0;*/
+	height: 100%;
+	width: 100%;
+	position: relative;
+	padding-top: 100px;
+	padding-left: 120px;
+	padding-right: 120px;
+	padding-bottom: 100px;
+	box-shadow: 0px 60px 20px red;
+}
+.carousel-inner{/*The images are here*/
+	margin: 0px;
+	border: 0px solid red;
+	height: 100%;
+	width: 100%;
+}
+/*
+.content-carrousel{
+    width: 100%;
+    position: absolute;
+    animation: rotar 10s infinite linear;
+    transform-style: preserve-3d;
+}
+
+.content-carrousel:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+/*
+.content-carrousel figure{
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px black;
+    transition: all 300ms;
+    
+}
+
+.content-carrousel figure:hover{
+    box-shadow: 0px 0px 0px 0px black;
+    transition: all 300ms;
+}
+
+.content-carrousel figure:nth-child(1){transform: rotateY(0deg) translateZ(300px);}
+.content-carrousel figure:nth-child(2){transform: rotateY(40deg) translateZ(300px);}
+.content-carrousel figure:nth-child(3){transform: rotateY(80deg) translateZ(300px);}
+.content-carrousel figure:nth-child(4){transform: rotateY(120deg) translateZ(300px);}
+.content-carrousel figure:nth-child(5){transform: rotateY(160deg) translateZ(300px);}
+.content-carrousel figure:nth-child(6){transform: rotateY(200deg) translateZ(300px);}
+.content-carrousel figure:nth-child(7){transform: rotateY(240deg) translateZ(300px);}
+.content-carrousel figure:nth-child(8){transform: rotateY(280deg) translateZ(300px);}
+.content-carrousel figure:nth-child(9){transform: rotateY(320deg) translateZ(300px);}
+.content-carrousel figure:nth-child(10){transform: rotateY(360deg) translateZ(300px);}
+
+.content-carrousel img{
+    width: 100%;
+    transition: all 300ms;
+}
+
+.content-carrousel img:hover{
+    transform: scale(1.2);
+    transition: all 300ms;
+}
+
+
+@keyframes rotar{
+    from{
+        transform: rotateY(0deg);
+    }to{
+        transform: rotateY(360deg);
+    }
+}
+/*
+@media only screen and (max-width:768px){
+    .content-carrousel{
+        width: 50%;
+        height: 30px;
+    }
+}*/
+/*@media screen(min-width: 300px){
+	#btEnviar, #bt1{
+	    font-size: 10px;
+	}
+}*/

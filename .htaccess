@@ -1,0 +1,36 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteRule ^inicio$ index.php
+RewriteRule ^inicio/$ index.php
+RewriteRule ^como-funcionamos$ como-funcionamos.php
+RewriteRule ^como-funcionamos/$ como-funcionamos.php
+RewriteRule ^precios$ precios.php
+RewriteRule ^precios/$ precios.php
+RewriteRule ^preguntas-frecuentes$ preguntas-frecuentes.php
+RewriteRule ^preguntas-frecuentes/$ preguntas-frecuentes.php
+RewriteRule ^aviso-privacidad$ aviso-privacidad.php
+RewriteRule ^aviso-privacidad/$ aviso-privacidad.php
+RewriteRule ^terminos-condiciones$ terminos-condiciones.php
+RewriteRule ^terminos-condiciones/$ terminos-condiciones.php
+RewriteRule ^unete$ unete.php
+RewriteRule ^unete/$ unete.php
+RewriteRule ^ordenar$ ordenar.php
+RewriteRule ^ordenar/$ ordenar.php
+RewriteRule ^cerrar-sesion$ cerrar-sesion.php
+RewriteRule ^cerrar-sesion/$ cerrar-sesion.php
+RewriteRule ^login$ login.php
+RewriteRule ^login/$ login.php
+RewriteRule ^register$ register.php
+RewriteRule ^register/$ register.php
+RewriteRule ^register2$ register-first-service.php
+RewriteRule ^register2/$ register-first-service.php
+RewriteRule ^register3$ register-first-service2.php
+RewriteRule ^register3/$ register-first-service2.php
+RewriteRule ^register4$ register-first-service3.php
+RewriteRule ^register4/$ register-first-service3.php
+RewriteRule ^password-reset$ password-reset.php
+RewriteRule ^password-reset/$ password-reset.php
+RewriteRule ^cuenta/([a-zA-Z0-9]+)$ cuenta.php?idUser=$1
+RewriteRule ^cuenta/([a-zA-Z0-9]+)/$ cuenta.php?idUser=$1
+</IfModule>
