@@ -1,6 +1,3 @@
-<?php 
-$section="home";
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +6,7 @@ $section="home";
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Mi NuNú prueba</title> <!--version 1.1 si vez esto luis mandame varios "XD"-->
+    <title>Mi NuNú prueba</title>
 
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/uikit.min.css" />
@@ -36,12 +33,167 @@ $section="home";
 	  js.src = "http://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.7";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>	
-    <?php include ('analytics.php') ?>
-  </head>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68946026-1', 'auto');
+  ga('send', 'pageview');
+
+</script>  </head>
     
   <body>
-  	<?php include ('header.php') ?>
-    <!--<div id="main-slider">
+  	<header>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/uikit.min.js"></script>
+    <meta name="google-site-verification" content="vs7XQQfM2le6paz5FxyXfks-3K1HcZabT6W79rt5Y_k" />
+
+	<!--<div class="full-width alerta" style="margin:0px;">
+			<div class="uk-alert alerta-prov" data-uk-alert>
+				<a href="" class="uk-alert-close uk-close"></a>
+				<!--<span class="glyphicon glyphicon-remove esconder" aria-hidden="true">cerrar</span>	
+				<div class="uk-grid">
+					<div class="uk-width-medium-4-10 uk-push-1-10">
+						<p><b class="notif-alert">¡Pide tu servicio por Télefono!</b><br>
+						Déjanos tus datos y te contactaremos a la brevedad</p>
+					</div>
+					<div class="uk-width-medium-4-10 uk-push-1-10" style="margin-top:9px;">
+						<form action="#" id="pedir" method="POST">
+						<input type="tel" name="telephone" placeholder="Teléfono" required>
+						<input type="text" name="code" placeholder="Código postal" required>
+						<input type="submit" value="Solicitar llamada">
+						</form>
+					</div>
+				</div>
+			</div> 				
+	</div> -->
+    <nav class="uk-navbar">
+        <a href="index.php"><img src="img/logo-minunu.png" class="brandLogo uk-navbar-brand uk-hidden-small"></a>
+        <ul id="main-menu" class="uk-navbar-nav uk-hidden-small">
+            <li id=current>
+                <a href="index.php">Inicio</a>
+            </li>
+            <li >
+                <a href="como-funcionamos">¿Cómo funcionamos?</a>
+            </li>
+            <li >
+                <a href="precios">Precios</a>
+            </li>
+            <li >
+                <a href="preguntas-frecuentes">Preguntas frecuentes</a>
+            </li><!--
+			<li >
+                <a href="register">Iniciar Sesión</a>
+            </li>-->
+
+        </ul>
+        <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+        <div class="clear"></div>
+    </nav>
+</header>
+
+<script type="text/javascript">
+    //var test= $( 'header>.uk-navbar' ).height();  
+	var test= $( 'header' ).height();  	
+    $('body').css('margin-top',test);
+	//Ajax para solicitar una llamada
+	$('#pedir').on('submit',function(e){
+		e.preventDefault();
+		var form = $(this);
+		var post = $(this).serialize();
+		$.ajax({
+		  method: "POST",
+		  url: "send-email.php?actionMethod=solicitar-llamada",
+		  data: post 
+		})
+		  .done(function( msg ) {
+			$('#pedir')[0].reset();	
+			switch(msg){
+				case '0':
+					//Fail
+						swal(
+						  'Oops...',
+						  'No se pudo procesar tu solicitud intenta nuevamente!',
+						  'error'
+						)				
+				break;
+				case '1':
+					//Fail
+						swal(
+						  'Oops...',
+						  'Por favor completa todos los campos solicitados!',
+						  'error'
+						)
+				break;				
+				case '3':
+					//mail ok
+						swal(
+						  'Gracias!',
+						  'Tu mensaje ha sido enviado, a la brevedad nos comunicamos contigo!',
+						  'success'
+						)
+				break;
+				case '4':
+					//Fail
+						swal(
+						  'Oops...',
+						  'Intenta nuevamente, en este momento no podemos atenderte!',
+						  'error'
+						)					
+				break;				
+			}
+		  });		
+	});
+	function asynMail(id,action){
+		var form = $(id);
+		var post = form.serialize();
+		$.ajax({
+		  method: "POST",
+		  url: "send-email.php?actionMethod="+action,
+		  data: post 
+		})
+		  .done(function( msg ) {
+			$(id)[0].reset();	
+			switch(msg){
+				case '0':
+					//Fail
+						swal(
+						  'Oops...',
+						  'No se pudo procesar tu solicitud intenta nuevamente!',
+						  'error'
+						)				
+				break;
+				case '1':
+					//Fail
+						swal(
+						  'Oops...',
+						  'Por favor completa todos los campos solicitados!',
+						  'error'
+						)
+				break;				
+				case '3':
+					//mail ok
+						swal(
+						  'Gracias!',
+						  'Tu mensaje ha sido enviado, a la brevedad nos comunicamos contigo!',
+						  'success'
+						)
+				break;
+				case '4':
+					//Fail
+						swal(
+						  'Oops...',
+						  'Intenta nuevamente, en este momento no podemos atenderte!',
+						  'error'
+						)					
+				break;				
+			}
+		  });	
+		return false;
+	}
+</script>    <!--<div id="main-slider">
 		<div class="uk-container uk-container-center nunu-descr">
 			<div class="uk-grid">
 				<div class="uk-width-medium-4-6 uk-width-small-* uk-push-1-6 uk-text-center">
@@ -273,7 +425,7 @@ $section="home";
             <div class="uk-width-medium-1-3 spec">
                 <img src="img/minunu-2.png"> 
                 <h4>Transparencia</h4>
-                <p>Conocerás el perfil de tu NuNú tan pronto como contrates el servicio.</p>
+                <p>Conocerás el perfil de tu NuNú tan pronto como contrates el servicio Garantizado.</p>
             </div>
             <div class="uk-width-medium-1-3 spec">
                 <img src="img/minunu-3.png"> 
@@ -420,9 +572,190 @@ $section="home";
       
     
     <div class="clear"></div>
-    <?php include ('footer.php') ?>
-    <?php require_once("side-nav.php"); ?>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <footer>
+	<div class="uk-container uk-container-center uk-text-center">
+		<!--<ul class="uk-subnav uk-flex-center">
+			<li><a href="">Inicio</a></li>
+			<li><a href="">Garantía MiNuNú</a></li>
+			<li><a href="">Cómo funciona</a></li>
+			<li><a href="">Precios</a></li>
+			<li><a href="">Preguntas frecuentes</a></li>	
+            <li><a href="">Iniciar Sesión</a></li>			
+			
+		</ul>-->
+		<div class="uk-grid">
+			<div class="uk-width-medium-1-3 uk-push-1-3">
+					<img src="img/logo-minunu-white.png">
+			</div>
+			<div class="uk-width-medium-1-3 uk-push-1-3 uk-vertical-align">
+				<div class="uk-panel uk-vertical-align-bottom">
+					<div class="social-m uk-text-left">
+						<img src="img/whatsapp.png"  alt="Whatsapp minunu"/>
+						<p>Mándanos un mensaje por WhatsApp al:
+						5543616870</p>
+					</div>
+					<div class="social-m uk-text-left">
+						<img src="img/mail.png"  alt="contacto minunu"/>
+						<p>O escríbenos a: contacto@minunu.com</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!--<div class="container">				
+					<ul class="uk-grid uk-grid-width-1-5">
+						<li class="uk-width-1-5"><a href="">Inicio</a></li>
+						<li class="uk-width-1-5"><a href="">Garantía MiNuNú</a></li>
+						<li class="uk-width-1-5"><a href="">Cómo funciona</a></li>
+						<li class="uk-width-1-5"><a href="">Precios</a></li>
+						<li class="uk-width-1-5"><a href="">Preguntas frecuentes</a></li>
+					</ul>				
+				
+                <img src="img/logo-minunu-white.png">
+                <!--<p>Teléfono:</p>
+                <a href="tel: 47535523">47535523</a>
+                <p>Horario de oficinas:</p>
+                <p>Lunes a Viernes de 9:00 a 18:00 hrs.</p>-->
+          
+          <!--  <div class="uk-width-medium-1-3">
+                <h3>Ayuda</h3>
+                <ul id="menu-footer">
+                    <li>
+                        <a href="como-funcionamos">¿Cómo funcionamos?</a>
+                    </li>
+                    <li>
+                        <a href="precios">Precios</a>
+                    </li>
+                    <li>
+                        <a href="preguntas-frecuentes">Preguntas frecuentes</a>
+                    </li>
+                    <li>
+                        <a href="aviso-privacidad">Aviso de privacidad</a>
+                    </li>
+                    <li>
+                        <a href="terminos-condiciones">Términos y condiciones</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="uk-width-medium-1-3">
+                <ul id="redes-sociales">
+                    <li class="fb"><a href="facebook.com" target="_blank">Facebook</a></li>
+                    <li class="tw"><a href="twitter.com" target="_blank">Twitter</a></li>
+                    <div class="clear"></div>
+                </ul>
+                <div class="clear"></div>
+                <h3>¿Quieres formar parte de nuestro equipo?</h3>
+                <p>Envía tu solicitud para unirte a <strong>MiNuNú</strong></p>
+                <a href="#" class="boton formulario2">¡Únete a MiNuNú!</a>
+            </div>-->
+     
+    </div>
+    <div class="clear"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/sweetalert2/4.1.7/sweetalert2.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/sweetalert2/4.1.7/sweetalert2.css" />
+<script src="https://cdn.jsdelivr.net/sweetalert2/4.1.7/sweetalert2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/sweetalert2/4.1.7/sweetalert2.js"></script>
+
+<script type="text/javascript">
+        $('document').ready(function(){
+            $('.formulario2').click(function(){
+                //ventana();
+            });
+        });
+
+        function ventana(){
+            swal({
+      title: '¡Déjanos tus datos!',
+      showCancelButton: true,            
+      html: '<p>Pronto nos pondremos en contacto contigo para darte más información sobre MiNuNú.</p><label>Nombre:</label><input id="swal-input1" type="text" class="swal2-input" autofocus><label>Correo:</label><input id="swal-input2" type="email" class="swal2-input" required>',
+      preConfirm: function() {
+        return new Promise(function(resolve) {
+
+                if($('#swal-input1').val()==""){            
+                    return false;
+                }else{
+                    var nombre = $('#swal-input1').val();
+                }
+
+                if($('#swal-input2').val()==""){            
+                    return false;
+                }else{
+                    var correo = $('#swal-input2').val();
+                }
+            
+            
+
+            jQuery.post("registerclients.php", {
+            nom:nombre,
+            maill:correo
+
+          }, function(data, textStatus){
+            console.log(data);
+            console.log("-------------");
+
+            if(data == 1){
+              /*$('#res').html("Datos insertados.");
+              $('#res').css('color','green');
+              */
+                sweetAlert(
+                  '¡Gracias!',
+                  'Pronto, nos pondremos en contacto contigo',
+                  'success'
+                )
+             
+
+            }
+            else{
+              console.log(data);
+                sweetAlert(
+                  '¡Ooops!',
+                  'Ocurrió un error, inténtalo de nuevo',
+                  'error'
+                )
+            }
+          });
+
+
+
+
+        });
+      }
+    }).then(function(result) {
+        sweetAlert(
+          'Datos insertados...',
+          'ya se insertaron!',
+          'success'
+        )
+    }).done();
+        }
+
+    </script>
+
+
+</footer>    <div id="offcanvas" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+        <ul class="uk-nav uk-nav-offcanvas">
+        	<li>
+            	<img src="img/logo-minunu.png" class="brandLogo">
+            </li>
+            <li id=current>
+                <a href="/">Inicio</a>
+            </li>
+            <li >
+                <a href="como-funcionamos">¿Cómo funciona?</a>
+            </li>
+            <li >
+                <a href="precios.php">Precios</a>
+            </li>
+            <li >
+                <a href="preguntas-frecuentes">Preguntas frecuentes</a>
+            </li>
+            <!--
+            -->
+        </ul>
+    </div>
+</div>    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 
