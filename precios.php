@@ -37,11 +37,14 @@ $section="precios";
                         <li class="libros fucsia">NuNú capacitada</li>
                         <li class="bebe fucsia">NuNú confiable</li>
                         <li class="tarjeta fucsia">Solo paga las horas utilizadas</li>
-                        <li class="carreola fucsia">Tu NuNú puede variar</li>                                               
+                        <li class="carreola fucsia">Tu NuNú puede variar</li>
+                        <br>
+                        <?php include ('botonpaypal170_new.html') ?>                                              
                     </ul> 
                 </div>
                 <div class="clear"></div>
                 <?php include('pedir.php') ?>
+                 
             </a>
             <a class="ventana formulario formulario2" href="#">
                 <h2>NuNú Frecuente</h2>
@@ -54,10 +57,13 @@ $section="precios";
                         <li class="tarjeta fucsia">Solo paga las horas utilizadas</li>
                         <li class="libros fucsia">Visitas calendarizadas en un horario fijo.</li>
                         <li class="carreola fucsia">Tu misma NuNú en cada visita</li>
+                        <br>
+                        <?php include ('botonpaypal130_new.html') ?>
                     </ul>
                 </div>
                 <div class="clear"></div>
                 <?php include('pedir.php') ?>
+                 
             </a>
             
         </div>
