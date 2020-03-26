@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Mi NuNú prueba</title>
+    <title>Mi NuNú prueba</title> <!-- v1.1.2>
 
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/uikit.min.css" />
@@ -53,7 +53,7 @@
 	<!--<div class="full-width alerta" style="margin:0px;">
 			<div class="uk-alert alerta-prov" data-uk-alert>
 				<a href="" class="uk-alert-close uk-close"></a>
-				<!--<span class="glyphicon glyphicon-remove esconder" aria-hidden="true">cerrar</span>	
+				<span class="glyphicon glyphicon-remove esconder" aria-hidden="true">cerrar</span>	
 				<div class="uk-grid">
 					<div class="uk-width-medium-4-10 uk-push-1-10">
 						<p><b class="notif-alert">¡Pide tu servicio por Télefono!</b><br>
