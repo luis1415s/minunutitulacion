@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Mi NuNú prueba</title> <!-- v1.1.2 
+    <title>Mi NuNú prueba</title>
 
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/uikit.min.css" />
     <link rel="stylesheet" href="css/form1.css">
-    <link rel="stylesheet" href="css/buttons.css">-->
+    <link rel="stylesheet" href="css/buttons.css">
     <!-- Flexslider -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
@@ -410,11 +410,7 @@
             </div>
         </div>	
         
-    </div> 
-	
-	
-	
-
+    </div>
     <div class="container">
         <div class="uk-grid">
             <div class="uk-width-medium-1-3 spec">
