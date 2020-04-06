@@ -1,6 +1,6 @@
 <?php 
 error_reporting(0);
-$destino="sofimed91@gmail.com";
+$destino="luiscarlos_vocacional5@outlook.es";
 $nombre = $_POST["nom"];
 $email = $_POST["mail1"];
 $contenido = "Hola! Alguien ha dejado sus datos para informacion:\n"."\n"."NOMBRE: ".$nombre."\nEMAIL: ".$email."\n\nCOMUNICATE CON ESTA PERSONA  ;) ";

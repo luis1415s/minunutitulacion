@@ -1,0 +1,9 @@
+.divf{
+    /*border: 3px solid black;*/	
+    -webkit-border-radius: 30px !important;
+    /*perspective: 1px;
+    padding: 20px; */
+    background: #AC6EC6;
+    width: 200px;
+    height: 150px;
+}

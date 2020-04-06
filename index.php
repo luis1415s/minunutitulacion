@@ -1,3 +1,6 @@
+<?php 
+$section="home";
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,12 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Mi NuNú prueba</title> <!-- v1.1.2 
+    <title>Mi NuNú prueba</title>
 
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/uikit.min.css" />
     <link rel="stylesheet" href="css/form1.css">
-    <link rel="stylesheet" href="css/buttons.css">-->
+    <link rel="stylesheet" href="css/buttons.css">
     <!-- Flexslider -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
@@ -69,29 +72,7 @@
 				</div>
 			</div> 				
 	</div> -->
-    <nav class="uk-navbar">
-        <a href="index.php"><img src="img/logo-minunu.png" class="brandLogo uk-navbar-brand uk-hidden-small"></a>
-        <ul id="main-menu" class="uk-navbar-nav uk-hidden-small">
-            <li id=current>
-                <a href="index.php">Inicio</a>
-            </li>
-            <li >
-                <a href="como-funcionamos">¿Cómo funcionamos?</a>
-            </li>
-            <li >
-                <a href="precios">Precios</a>
-            </li>
-            <li >
-                <a href="preguntas-frecuentes">Preguntas frecuentes</a>
-            </li><!--
-			<li >
-                <a href="register">Iniciar Sesión</a>
-            </li>-->
-
-        </ul>
-        <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
-        <div class="clear"></div>
-    </nav>
+    <?php include ('header.php') ?>
 </header>
 
 <script type="text/javascript">
@@ -410,11 +391,7 @@
             </div>
         </div>	
         
-    </div> 
-	
-	
-	
-
+    </div>
     <div class="container">
         <div class="uk-grid">
             <div class="uk-width-medium-1-3 spec">
@@ -733,217 +710,5 @@
     </script>
 
 
-</footer>    <div id="offcanvas" class="uk-offcanvas">
-    <div class="uk-offcanvas-bar">
-        <ul class="uk-nav uk-nav-offcanvas">
-        	<li>
-            	<img src="img/logo-minunu.png" class="brandLogo">
-            </li>
-            <li id=current>
-                <a href="/">Inicio</a>
-            </li>
-            <li >
-                <a href="como-funcionamos">¿Cómo funciona?</a>
-            </li>
-            <li >
-                <a href="precios.php">Precios</a>
-            </li>
-            <li >
-                <a href="preguntas-frecuentes">Preguntas frecuentes</a>
-            </li>
-            <!--
-            -->
-        </ul>
-    </div>
-</div>    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/sweetalert2/4.1.7/sweetalert2.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/sweetalert2/4.1.7/sweetalert2.css" />
-    <script src="https://cdn.jsdelivr.net/sweetalert2/4.1.7/sweetalert2.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/sweetalert2/4.1.7/sweetalert2.js"></script>
-      
-
-    <!-- FlexSlider -->
-      
-      <script defer src="js/jquery.flexslider.js"></script>
-      
-      <!-- ESTO SE COMENTARIZÓ DEBIDO A QUE NO TUVO EFECTO  //////
-
-      <script type="text/javascript">
-		$( ".uk-close" ).click(function() {
-			var contain_alert = $('header').height(); 			
-			var alto_alert    = $('.alerta').height();
-			var final_operation = contain_alert - alto_alert;
-			$('body').css('margin-top',final_operation);
-		});
-        /*///////////////////////////////////////////////*/
-        swal({
-      title: '¡Déjanos tus datos!',
-      showCancelButton: true,            
-      html: '<p>Pronto nos pondremos en contacto contigo para darte más información sobre MiNuNú.</p><label>Nombre:</label><input id="swal-input1" type="text" class="swal2-input" autofocus><label>Correo:</label><input id="swal-input2" type="email" class="swal2-input" required>',
-      preConfirm: function() {
-        return new Promise(function(resolve) {
-
-                if($('#swal-input1').val()==""){            
-                    return false;
-                }else{
-                    var nombre = $('#swal-input1').val();
-                }
-
-                if($('#swal-input2').val()==""){            
-                    return false;
-                }else{
-                    var correo = $('#swal-input2').val();
-                }
-            
-            
-
-            jQuery.post("registerclients.php", {
-            nom:nombre,
-            maill:correo
-
-          }, function(data, textStatus){
-            console.log(data);
-            console.log("-------------");
-
-            if(data == 1){
-              //$('#res').html("Datos insertados.");
-              //$('#res').css('color','green');
-              
-                sweetAlert(
-                  '¡Gracias!',
-                  'Pronto, nos pondremos en contacto contigo',
-                  'success'
-                )
-             
-
-            }
-            else{
-              console.log(data);
-                sweetAlert(
-                  '¡Ooops!',
-                  'Ocurrió un error, inténtalo de nuevo',
-                  'error'
-                )
-            }
-          });
-
-
-
-
-        });
-      }
-    }).then(function(result) {
-        sweetAlert(
-          'Datos insertados...',
-          'ya se insertaron!',
-          'success'
-        )
-    }).done();
-
-
-
-
-    $('document').ready(function(){
-            $('.formularioh').click(function(){
-                ventana();
-            });
-        });
-
-        function ventana(){
-            swal({
-      title: '¡Déjanos tus datos!',
-      showCancelButton: true,            
-      html: '<p>Pronto nos pondremos en contacto contigo para darte más información sobre MiNuNú.</p><label>Nombre:</label><input id="swal-input1" type="text" class="swal2-input" autofocus><label>Correo:</label><input id="swal-input2" type="email" class="swal2-input" required>',
-      
-      
-
-
-      preConfirm: function() {
-        return new Promise(function(resolve) {
-
-                if($('#swal-input1').val()==""){            
-                    return false;
-                }else{
-                    var nombre = $('#swal-input1').val();
-                }
-
-                if($('#swal-input2').val()==""){            
-                    return false;
-                }else{
-                    var correo = $('#swal-input2').val();
-                }
-            
-            
-
-            jQuery.post("registerclients.php", {
-            nom:nombre,
-            maill:correo
-
-          }, function(data, textStatus){
-            console.log(data);
-            console.log("-------------");
-
-            if(data == 1){
-              /*$('#res').html("Datos insertados.");
-              $('#res').css('color','green');
-              */
-     
-                sweetAlert(
-                  '¡Gracias!',
-                  'Pronto, nos pondremos en contacto contigo',
-                  'success'
-                )
-             
-
-            }
-            else{
-              console.log(data);
-                sweetAlert(
-                  '¡Ooops!',
-                  'Ocurrió un error, inténtalo de nuevo',
-                  'error'
-                )
-            }
-          });
-
-
-
-
-        });
-      }
-    }).then(function(result) {
-        sweetAlert(
-          'Datos insertados...',
-          'ya se insertaron!',
-          'success'
-        )
-    }).done();
-
-     /////////////////////////// */
-         }
-
-
-
-
-
-
-
-
-
-        $(window).load(function(){
-          $('.flexslider').flexslider({
-            animation: "slide",
-            directionNav: false,
-            start: function(slider){
-              $('body').removeClass('loading');
-            }
-          });
-        });
-      </script>
-    /////////////////////////////AQUI TERMINA LO COMENTARIZADO-->
-    <!-- End FlexSlider -->
   </body>
 </html>
