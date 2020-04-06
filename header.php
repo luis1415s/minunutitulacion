@@ -34,6 +34,9 @@
             <li <?php if($section == "precios")echo "id=current" ?>>
                 <a href="precios">Precios</a>
             </li>
+			<li <?php if($section == "equiponunu")echo "id=current" ?>>
+                <a href="equiponunu">Nuestro Equipo</a>
+            </li>
             <li <?php if($section == "preguntas-frecuentes")echo "id=current" ?>>
                 <a href="preguntas-frecuentes">Preguntas frecuentes</a>
             </li><!--

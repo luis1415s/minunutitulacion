@@ -1,3 +1,6 @@
+<?php 
+$section="home";
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -69,29 +72,7 @@
 				</div>
 			</div> 				
 	</div> -->
-    <nav class="uk-navbar">
-        <a href="index.php"><img src="img/logo-minunu.png" class="brandLogo uk-navbar-brand uk-hidden-small"></a>
-        <ul id="main-menu" class="uk-navbar-nav uk-hidden-small">
-            <li id=current>
-                <a href="index.php">Inicio</a>
-            </li>
-            <li >
-                <a href="como-funcionamos">¿Cómo funcionamos?</a>
-            </li>
-            <li >
-                <a href="precios">Precios</a>
-            </li>
-            <li >
-                <a href="preguntas-frecuentes">Preguntas frecuentes</a>
-            </li><!--
-			<li >
-                <a href="register">Iniciar Sesión</a>
-            </li>-->
-
-        </ul>
-        <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
-        <div class="clear"></div>
-    </nav>
+    <?php include ('header.php') ?>
 </header>
 
 <script type="text/javascript">
