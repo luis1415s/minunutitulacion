@@ -35,14 +35,14 @@
                 <a href="precios">Precios</a>
             </li>
 			<li <?php if($section == "equiponunu")echo "id=current" ?>>
-                <a href="equiponunu">Nuestro Equipo</a>
+                <a href="equiponunu.php">Nuestro Equipo</a>
             </li>
             <li <?php if($section == "preguntas-frecuentes")echo "id=current" ?>>
                 <a href="preguntas-frecuentes">Preguntas frecuentes</a>
-            </li><!--
+            </li>
 			<li <?php /*if($section == "Iniciar Sesión")echo "id=current"*/ ?>>
                 <a href="register">Iniciar Sesión</a>
-            </li>-->
+            </li>
 
         </ul>
         <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>

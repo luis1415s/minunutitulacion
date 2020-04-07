@@ -56,7 +56,7 @@ $section="register";
     <div class="espacio"></div>
     <div class="espacio"></div>
     
-        <form class="uk-form uk-form-horizontal register-form" method="POST" action="register2">
+        <form class="uk-form uk-form-horizontal register-form" method="POST" action="register2.php">
             <fieldset data-uk-margin>
                 <legend>Crea tu cuenta<span>¿Ya tienes cuenta?<a href="login">  Inicia sesión</a></span></legend>
                 <div class="uk-form-row">

@@ -53,8 +53,8 @@ $section="ordenar";
 	    </div>
 	    	    
 	    
-	      
-	    			<!-- Div de la derecha -->
+	      <!--
+	    			 Div de la derecha 
 	    			
 	    <div class="register-right">
 	    <div style="height:100px;"></div>
@@ -73,7 +73,7 @@ $section="ordenar";
 		    		<img src="img/garantia.png" style="margin-top: 50%;" alt="garantia">
 	    	</div>
 	    
-	    
+	    -->
 	    
 	    
 	    </div>

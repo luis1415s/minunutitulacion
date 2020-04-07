@@ -57,17 +57,17 @@ $section="register";
     
         <form class="uk-form uk-form-horizontal register-form"  method="POST" action="register-first-service2.php">
             <fieldset data-uk-margin>
-                <legend>¿Cada cuanto necesitas un NuNú?</legend>
+                <legend>¿Cada cuanto necesitas una NuNú?</legend>
                 
                 						<!-- Botones -->
                 <div class="uk-form-row">
 						  <div id="contenedor-botones">
 							  	<div id="semana" class="botones-margen" onclick="semana();" style="float:left;">							  	
-							  		<h2 style="color:darkmagenta;">Cada semana</h2>
+							  		<h2 style="color:darkmagenta;">Nunú Frecuente</h2>
 							  		<span>Tu NuNú cada semana</span>
 							  	</div>
 							  	<div id="una-vez" class="botones-margen" onclick="una();" style="float:right;"> 
-							  		<h2 style="color:darkmagenta;">Sólo una vez</h2>
+							  		<h2 style="color:darkmagenta;">Nunú Ocacional</h2>
 							  		<div style="width:100%;margin:auto;">
 							  			<span>Una NuNú distinta en cada visita</span>
 							  		</div>
@@ -82,12 +82,13 @@ $section="register";
                     		<div id="contenedor-select">
                     			<select id="op-horas" onclick="horass();">
                     				<option selected>Selecciona las horas</option>
-                    				<option value="3">3 horas, $80 la hora</option>
-                    				<option value="3.5">3 horas y media, $80 cada hora</option>
-                    				<option value="4">4 horas, $75 cada hora</option>
-                    				<option value="4.5">4 horas y media, $75 cada hora</option>
-                    				<option value="5">5 horas, $70 cada hora</option>
-                    				<option value="5.5">5 horas y media, $70 cada hora</option>
+                    				<option value="3">3 horas , $170 </option>
+                    				<option value="3.5">3 horas y media, $230</option>
+                    				<option value="4">4 horas, $270</option>
+                    				<option value="4.5">4 horas y media, $330</option>
+                    				<option value="5">5 horas, $370</option>
+                    				<option value="5.5">5 horas y media, $430</option>
+									<option value="6">6 horas, $470</option>
                     			
                     			</select>
                     		</div>                    		                    		                    
@@ -95,14 +96,14 @@ $section="register";
                 </div>
                 
                 
-                <div class="uk-form-row">
+                <!--<div class="uk-form-row">
                       <div class="contenedor-horas">
                     		<label style="float:left;">¿Cuál es tu código postal?</label>
                     		<div id="contenedor-postal">
                     			<input type="text" id="cp" name="cp" placeholder="tu código postal en la CDMX" required pattern="[0-9]{5}" />
                     		</div>                    		                    		                    
                     </div>
-                </div>
+                </div> -->
                 
                 <input type="text" name="name" hidden="hidden" value="<?php echo $_POST[name]; ?>">
                 <input type="text" name="lastName" hidden="hidden" value="<?php echo $_POST[lastName]; ?>">

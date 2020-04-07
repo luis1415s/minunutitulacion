@@ -105,10 +105,8 @@ $section="register";
                       <div class="contenedor-horas">
                     		<label style="float:left;">Nombre en tarjeta</label>
                     		<div id="contenedor-nombreTarjeta">                 				
-              					<input type="text" id="cardholderName"  data-checkout="cardholderName"  placeholder="Ingresa el nombre en tarjeta"  required="required"  
-								
-								
-                    		</div>                    		                    		                    
+              					<input type="text" id="cardholderName"  data-checkout="cardholderName"  placeholder="Ingresa el nombre en tarjeta"  required="required" > 
+							</div>                    		                    		                    
                     </div>
                 </div>
                 
@@ -243,7 +241,7 @@ $section="register";
             </fieldset>
 			</form>     
      </div>
-
+                
         <div class="espacio"></div>
 
 

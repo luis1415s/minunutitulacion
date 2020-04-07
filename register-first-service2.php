@@ -183,23 +183,26 @@ $section="register";
 				<?php
 								switch($_POST['horas']) {
 									case 3:
-										$total= 240;
+										$total= 170;
 										break;
 									case 3.5:
-										$total=280;
+										$total= 230;
 										break;
 									case 4:
-										$total= 300;
+										$total= 270;
 										break;
 									case 4.5:
-										$total= 337.5;
+										$total= 330;
 										break;
 									case 5:
-										$total= 350;
+										$total= 370;
 										break;
 									case 5.5:
-										$total= 385;
+										$total= 430;
 										break;
+									case 6:
+										$total= 470;
+										break;	
 								}								                    		
                     		 ?>                                                            
                 </div>
@@ -221,9 +224,10 @@ $section="register";
 	                <input type="text" name="horaIni" id="horaIni">
 					<input type="text" name="horas" id="horas">
 	                
-	
+								<!--
 	                <input type="text" name="lat" id="lat"  required>
-	                <input type="text" name="lng" id="lng"  required>
+					<input type="text" name="lng" id="lng"  required>
+							-->
                 </div>
                 
                 
@@ -241,7 +245,8 @@ $section="register";
                     <input class="uk-button boton-lila" type="submit" value="Continuar">
                 </div>
             </fieldset>
-        </form>
+		</form>
+		
         <div class="espacio"></div>
      </div>
      								<!-- RESUMEN -->
