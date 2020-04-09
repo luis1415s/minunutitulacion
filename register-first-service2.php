@@ -60,7 +60,7 @@ $section="register";
 	<div class="mapa-left">    
         <form class="uk-form uk-form-horizontal register-form" method="POST" action="register-first-service3.php">   
         
-                									<!-- Que día y hora -->
+                									<!-- Que día y -->
             <fieldset data-uk-margin>
                 <legend>¿Que día y hora necesitas a tu NuNú?</legend>
                 
@@ -181,7 +181,8 @@ $section="register";
                     		</div>                    		                    		                    
                     </div>
 				<?php
-								switch($_POST['horas']) {
+				$horas = $_POST['horas'];
+								switch($horas) {
 									case 3:
 										$total= 170;
 										break;
@@ -216,18 +217,18 @@ $section="register";
 	                <input type="text" name="pass2"  value="<?php echo $_POST[pass2]; ?>">
 	                
 	                <input type="text" id="frecuencia" name="frecuencia" value="<?php echo $_POST['frecuencia']; ?>">
-	              <input type="text" id="horas" name="horas" value="<?php echo $_POST[horas]; ?>">
+	              	<input type="text" id="horas" name="horas" value="<?php echo $_POST[horas]; ?>">
 	                <input type="text" id="cp" name="cp" value="<?php echo $_POST[cp]; ?>">
 	                
 	                <input type="text" name="total" id="total" value="<?php echo $total; ?>">
 	                <input type="text" name="fechaInput" id="fechaInput">
 	                <input type="text" name="horaIni" id="horaIni">
-					<input type="text" name="horas" id="horas">
+					<input type="text" name="horas" id="horas" value="<?php echo $horas;?>" >
 	                
-								<!--
-	                <input type="text" name="lat" id="lat"  required>
-					<input type="text" name="lng" id="lng"  required>
-							-->
+								
+	                <input type="text" name="lat" id="lat"  >
+					<input type="text" name="lng" id="lng"  >
+							
                 </div>
                 
                 

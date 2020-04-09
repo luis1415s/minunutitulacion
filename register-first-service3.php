@@ -197,15 +197,15 @@ $section="register";
                 
                 <div class="uk-form-row">                
                       <div style=" border-bottom: grey;border-bottom-width: thin;border-bottom-style: solid;height: 40px;">
-                    		<label class="izquierda">Horas:</label>
-                    		<label class="derecha"><?php echo $_POST['horas']; ?></label>                  		                    		                    
+                            <label class="izquierda">Horas:</label>
+                    		<label class="derecha" id="horas"><?php echo $_POST['horas']; ?></label>                     		                    		                    
                     </div>
                 </div>
                                                                
                 <div class="uk-form-row">
                       <div style=" border-bottom: grey;border-bottom-width: thin;border-bottom-style: solid;height: 40px;">
                     		<label class="izquierda">Fecha:</label>
-                    		<label class="derecha" id="fecha"><?php echo $_POST['fechaInput']; ; ?></label>                    		                 		                    		                    
+                    		<label class="derecha" id="fecha"><?php echo $_POST['fechaInput']; ?></label>                    		                 		                    		                    
                     </div>
                 </div>
                 
@@ -237,11 +237,56 @@ $section="register";
                     </div>
                 </div>   
                 
-                                                              
+
+</div>                                            
             </fieldset>
-			</form>     
-     </div>
-                
+            </form> 
+            <?php 
+$total = $_POST['total'];
+switch($total) {
+									case 170:
+										$total= "3 horas";
+										break;
+									case 230:
+										$total= "3 horas";
+										break;
+									case 270:
+										$total= "4 horas";
+										break;
+									case 330:
+										$total= "4 horas y media";
+										break;
+									case 370:
+										$total= "5 horas";
+										break;
+									case 430:
+										$total= "5 horas y media";
+										break;
+									case 470:
+										$total= "6 horas";
+										break;	
+                                }				
+?>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick" value="<?php echo "$".$_POST['total']; ?>">
+<table>
+<tr><td><input type="hidden" name="on0" value="Ya Puedes Pagar Tu NuNú con PayPal">Ya Puedes Pagar Tu NuNú con PayPal</td></tr><tr><td><select name="os0">
+
+	
+	<option value="<?php echo $total; ?>"><?php echo $total; ?> <?php echo "$".$_POST['total']; ?> MXN </option>
+	
+</select> </td></tr>
+</table>
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+<input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+</form>
+            <!--paypalboton
+            
+-->
+			    
+    
+    </div> 
         <div class="espacio"></div>
 
 

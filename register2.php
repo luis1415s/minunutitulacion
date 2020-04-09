@@ -96,14 +96,14 @@ $section="register";
                 </div>
                 
                 
-                <!--<div class="uk-form-row">
+                <div class="uk-form-row">
                       <div class="contenedor-horas">
                     		<label style="float:left;">¿Cuál es tu código postal?</label>
                     		<div id="contenedor-postal">
                     			<input type="text" id="cp" name="cp" placeholder="tu código postal en la CDMX" required pattern="[0-9]{5}" />
                     		</div>                    		                    		                    
                     </div>
-                </div> -->
+                </div> 
                 
                 <input type="text" name="name" hidden="hidden" value="<?php echo $_POST[name]; ?>">
                 <input type="text" name="lastName" hidden="hidden" value="<?php echo $_POST[lastName]; ?>">
