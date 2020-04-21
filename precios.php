@@ -8,7 +8,7 @@ $section="precios";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Mi NuNú | Precios</title>
+    <title>Mi NuNú | Servicios</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/uikit.min.css" />
     <link href="css/main.css" rel="stylesheet"/>
@@ -26,31 +26,29 @@ $section="precios";
   <body>
     <?php include ('header.php') ?>
     <div class="container">
-        <h1 class="morado grande center espacio-texto-top"><b>Precios</b></h1>
+        <h1 class="morado grande center espacio-texto-top"><b>Servicios MiNuNú</b></h1>
         <div id="precios">
-            <a class="ventana formulario formulario2" href="#">
+            <a class="ventana formulario formulario2" href="register.php">
                 <h2>NuNú Ocasional</h2>
                 <div class="def" id="lista-alt">
-                    <p class="morado-fuerte">$170 p/h</p>
-                    <p class="morado-fuerte">Min. 3 horas</p>
+                   
                     <ul>
                         <li class="libros fucsia">NuNú capacitada</li>
                         <li class="bebe fucsia">NuNú confiable</li>
                         <li class="tarjeta fucsia">Solo paga las horas utilizadas</li>
                         <li class="carreola fucsia">Tu NuNú puede variar</li>
                         <br>
-                        <?php include ('botonpaypal170_new.html') ?>                                              
+                        <?php /*include ('botonpaypal170_new.html')*/ ?>                                              
                     </ul> 
                 </div>
                 <div class="clear"></div>
-                <?php include('pedir.php') ?>
+                <?php /* include('pedir.php') */ ?>
                  
             </a>
-            <a class="ventana formulario formulario2" href="#">
+            <a class="ventana formulario formulario2" href="register.php">
                 <h2>NuNú Frecuente</h2>
                 <div class="def" id="alt-base">
-                    <p class="morado-fuerte">$130 p/h</p>
-                    <p class="morado-fuerte">Min. 3 horas</p>
+                    
                     <ul>
                         <li class="libros fucsia">NuNú capacitada</li>
                         <li class="bebe fucsia">NuNú confiable</li>
@@ -58,17 +56,17 @@ $section="precios";
                         <li class="libros fucsia">Visitas calendarizadas en un horario fijo.</li>
                         <li class="carreola fucsia">Tu misma NuNú en cada visita</li>
                         <br>
-                        <?php include ('botonpaypal130_new.html') ?>
+                        <?php /* include ('botonpaypal130_new.html') */?>
                     </ul>
                 </div>
                 <div class="clear"></div>
-                <?php include('pedir.php') ?>
-                 
+                <?php /*include('pedir.php')*/ ?>
             </a>
-            
         </div>
     </div>   
     <div class="clear"></div>
+    <?php include('pedir.php') ?>
+    <br><br><br><br>
     <?php include ('footer.php') ?>
     <?php require_once("side-nav.php"); ?>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

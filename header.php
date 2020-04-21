@@ -32,7 +32,7 @@
                 <a href="como-funcionamos">¿Cómo funcionamos?</a>
             </li>
             <li <?php if($section == "precios")echo "id=current" ?>>
-                <a href="precios">Precios</a>
+                <a href="precios">Servicios</a>
             </li>
 			<li <?php if($section == "equiponunu")echo "id=current" ?>>
                 <a href="equiponunu.php">Nuestro Equipo</a>
@@ -40,9 +40,9 @@
             <li <?php if($section == "preguntas-frecuentes")echo "id=current" ?>>
                 <a href="preguntas-frecuentes">Preguntas frecuentes</a>
             </li>
-			<li <?php /*if($section == "Iniciar Sesión")echo "id=current"*/ ?>>
+			<!--<li <?php /*if($section == "register")echo "id=current"*/ ?>>
                 <a href="register">Iniciar Sesión</a>
-            </li>
+            </li>-->
 
         </ul>
         <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>

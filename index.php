@@ -319,7 +319,7 @@ $section="home";
 			</div>
 		</div>
 	</div>-->
-	
+    <br><br>
 	 <div class="container">
         
     	<br>
@@ -409,38 +409,9 @@ $section="home";
                 <h4>Respeto</h4>
                 <p>Porque sabemos que tu hogar y tu familia son lo más importante para ti.</p>
             </div>
-            <div class="uk-width-1-1">
-            	<input type="button" class="boton-arcoiris" name="btnpide" value="Pide tu NuNú" onclick="document.getElementById('id01').style.display='block'">
-                <!--<a href="#" class="boton-arcoiris formularioh">Pide tu <strong>NuNú</strong></a>-->
-            </div>
-            <div id="id01" class="w3-modal">
-            <br><br><br>
-            <div class="w3-modal-content">
-                <div class="w3-container">
-                <!--<span id="close" onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">X</span>-->
-                    <div class="titform">
-                        <h3 id="tf">¡Déjanos tus datos!</h3>
-                        <p id="pf">Pronto nos pondremos en contacto contigo para darte más información sobre MiNuNú.</p>
-                    </div>
-                    <div class="form1">
-                        <form name="miformulario" id="miformulario" method="post">
-                            <div class="ndiv">
-                                <input type="text" name="nom" id="name1" autocomplete="off"  placeholder="Nombre" required>
-                            </div>
-                            <div class="ediv">
-                                <input type="text" name="mail1" id="email1" autocomplete="off"  placeholder="Correo electronico" required>
-                            </div>
-                            <div class="buttons">
-                                <button class="button" type="submit" id="btEnviar" formaction="enviarEmail.php">Enviar</button>
-                                <button id="btc" class="button" onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-bottom">Cancelar</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>            
-            </div>
-            </div>
         </div>
     </div>
+    <?php include('pedir.php') ?>
   <div class="full-width full-width-home garantia">
         <div class="uk-grid">
             <div class="uk-width-medium-6-10 left">
@@ -510,45 +481,12 @@ $section="home";
             <div class="uk-width-1-1 center">
                 <h3 class="round morado">mi niñera en un click</h3>
                 <!--CODIGO DEL BOTON Y FORM-->
-                <div class="uk-width-1-1">
-                <input type="button" class="boton-arcoiris" name="btnpide" value="Pide tu NuNú" onclick="document.getElementById('id01').style.display='block'">
-                <!--<a href="#" class="boton-arcoiris formularioh">Pide tu <strong>NuNú</strong></a>-->
-                </div>
-                <div id="id01" class="w3-modal">
-                <br><br><br>
-                <div class="w3-modal-content">
-                    <div class="w3-container">
-                    <!--<span id="close" onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">X</span>-->
-                        <div class="titform">
-                            <h3 id="tf">¡Déjanos tus datos!</h3>
-                            <p id="pf">Pronto nos pondremos en contacto contigo para darte más información sobre MiNuNú.</p>
-                        </div>
-                        <div class="form1">
-                            <form name="miformulario" id="miformulario" method="post">
-                                <div class="ndiv">
-                                    <input type="text" name="nom" id="name1" autocomplete="off"  placeholder="Nombre" required>
-                                </div>
-                                <div class="ediv">
-                                    <input type="text" name="mail1" id="email1" autocomplete="off"  placeholder="Correo electronico" required>
-                                </div>
-                                <div class="buttons">
-                                    <button class="button" type="submit" id="btEnviar" formaction="enviarEmail.php">Enviar</button>
-                                    <button id="btc" class="button" onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-bottom">Cancelar</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>            
-                </div>
-                </div>
-                <!--TERMINA CODIGO DEL BOTON Y FORM-->
-                <!--<input type="button" class="boton-arcoiris formularioh" name="btnpide" value="Pide tu NuNú" action="">-->
-                <!--<a href="#" class="boton-arcoiris formularioh">Pide tu <strong>NuNú</strong></a>-->
+                
             </div>
         </div>
     </div>
-      
-    
-    <div class="clear"></div>
+    <?php include('pedir.php') ?>
+    <br><br><b><br><br></b>
     <footer>
 	<div class="uk-container uk-container-center uk-text-center">
 		<!--<ul class="uk-subnav uk-flex-center">
