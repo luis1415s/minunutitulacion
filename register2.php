@@ -8,7 +8,7 @@ $section="register";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Mi NuNú | Registro</title>
+    <title>Mi NuNú | Pide tu Servicio</title>
 
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/uikit.min.css" />
@@ -27,7 +27,7 @@ $section="register";
 			<div style="width:100%;">
 				<div class='elemento-menu-register' >
 					<span class='icon-user-outline'></span>
-					Crear Cuenta
+					Datos Generales
 					<img class="progress-arrow" src="img/progress-arrow.png" alt="Void.54b2f337" />
 				</div>
 				<div class='elemento-menu-register' style="font-weight: bold;font-size: initial;">

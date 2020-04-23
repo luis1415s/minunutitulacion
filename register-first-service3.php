@@ -8,7 +8,7 @@ $section="register";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Mi NuNú | Registro</title>
+    <title>Mi NuNú | Pide tu Servicio</title>
 
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/uikit.min.css" />
@@ -19,6 +19,12 @@ $section="register";
  
     <?php include ('analytics.php') ?>
   </head>
+  <style>
+    .resumen-right{
+        text-align: center;
+        margin-left: 300px !important;
+    }
+  </style>
   <body>
   	<?php include ('header.php') ?>
 
@@ -32,7 +38,7 @@ $section="register";
 			<div style="width:100%;">
 				<div class='elemento-menu-register'>
 					<span class='icon-user-outline'></span>
-					Crear Cuenta
+					Datos Generales
 					<img class="progress-arrow" src="img/progress-arrow.png" alt="Void.54b2f337" />
 				</div>
 				<div class='elemento-menu-register'>
@@ -61,13 +67,13 @@ $section="register";
     		<div class="espacio"></div>
     								
 
-    
+    <!--
 	<div class="mapa-left">    
         <form action="testCobro.php" class="uk-form uk-form-horizontal register-form" method="post" id="pay" name="pay" >
         
-            								<!-- Datos recaudados por POST-->
+            								<!-- Datos recaudados por POST--><!--
     		<div hidden="hidden">
-	                <input type="text" name="first_name"  value="<?php echo $_POST[name]; ?>">
+	                <input type="text" name="first_name"  value="<?php /*echo $_POST[name]; ?>">
 	                <input type="text" name="last_name"  value="<?php echo $_POST[lastName]; ?>">
 	                <input type="text" name="email"  value="<?php echo $_POST[email]; ?>">
 	                <input type="text" name="phone"  value="<?php echo $_POST[phone]; ?>">
@@ -97,7 +103,7 @@ $section="register";
 					
 					
                 </div>
-                									<!-- Que día y hora -->            
+                			<!-- Que día y hora -->           
             <fieldset data-uk-margin>
                 <legend>Reservar servicio</legend>
                 
@@ -180,18 +186,19 @@ $section="register";
 
                 
                 <div class="uk-form-row">
-                    <input class="uk-button boton-lila" type="submit" value="Reservar con $<?php echo $_POST["total"]; ?>">
+                    <input class="uk-button boton-lila" type="submit" value="Reservar con $<?php echo $_POST["total"]; */?>">
                 </div>
             </fieldset>
 
         </form>
+        -->
         <div class="espacio"></div>
      </div>
      
      													<!-- RESUMEN -->
      													
      <div class="resumen-right">     		
-			<form class="uk-form uk-form-horizontal register-form" style="float:left;width:50%;">
+			<form class="uk-form uk-form-horizontal register-form" style="">
 				 <fieldset data-uk-margin>
                 <legend>Resumen</legend>
                 
@@ -236,11 +243,11 @@ $section="register";
                     		<strong><label class="derecha fucsia" id="total"><?php echo "$".$_POST['total']; ?></label></strong>                    		                 		                    		                    
                     </div>
                 </div>   
-                
 
 </div>                                            
             </fieldset>
-            </form> 
+            </form>
+            
             <?php 
 $total = $_POST['total'];
 switch($total) {
@@ -277,6 +284,7 @@ switch($total) {
 	
 </select> </td></tr>
 </table>
+<br><br>
 <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
 <input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
 <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
@@ -292,6 +300,7 @@ switch($total) {
 
         <div class="clear"></div>
     </div> 
+    <br><br><br>
     <?php include ('footer.php') ?>
     <?php require_once("side-nav.php"); ?>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
