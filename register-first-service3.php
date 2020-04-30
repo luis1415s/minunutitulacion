@@ -244,7 +244,8 @@ $section="register";
                     </div>
                 </div>   
 
-</div>                                            
+</div>            
+                                
             </fieldset>
             </form>
             
@@ -289,14 +290,61 @@ switch($total) {
 <input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
 <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
 </form>
-            <!--paypalboton
-            
--->
-			    
-    
-    </div> 
-        <div class="espacio"></div>
 
+
+            <!--paypalboton -->
+			    
+              
+    </div> 
+  <!--codigo boton -->
+<confirmar>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/form1.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="css/main.css" rel="stylesheet"/>
+<div class="uk-width-1-1">
+<input type="button" class="boton-arcoiris" name="btnpide" value="Pide tu NuNú" onclick="document.getElementById('id01').style.display='block'">
+<!--<input type="button" class="boton-arcoiris" name="btnpide" value="Pide tu NuNú" onclick="location.href='Gracias.php'">
+<a href="#" class="boton-arcoiris formularioh">Pide tu <strong>NuNú</strong></a>-->
+</div>
+
+<div id="id01" class="w3-modal">
+<br><br><br>
+<div class="w3-modal-content">
+    <div class="w3-container">
+    <span id="close" onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">X</span>
+       
+        <div class="titform">
+            <h3 id="tf"><b>¡Confirma tus datos!</b></h3>
+            <p id="pf">Pronto nos pondremos en contacto contigo para darte más información sobre Tu MiNuNú.</p>
+        </div>
+        <div class="form1">
+            <form name="miformulario" id="miformulario" >
+                <div class="ndiv">
+                    <input type="text" name="nom" id="name1" autocomplete="off"  placeholder="Calve de pedido" >
+                
+                </div>
+                <div class="ediv">
+                    <input type="text" name="mail1" id="email1" autocomplete="off"  placeholder="Correo electronico" >
+                </div>
+                <div class="buttons">  
+                <input type="button" class="button" name="btnpide" value="Confirmar" onclick="location.href='Gracias.php'">                  
+            </form>
+
+
+                    <!--<button class="button"  id="btEnviar" onclick="location.href='Gracias.php'">Enviar</button>-->
+                    
+                </div>
+            </form>
+        </div>
+    </div>            
+</div>
+</div>
+<!--TERMINA CODIGO DEL BOTON Y FORM-->
+</confirmar>
+
+        <div class="espacio"></div>
 
         <div class="clear"></div>
     </div> 
